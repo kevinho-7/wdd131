@@ -1,0 +1,17 @@
+header, footer {
+    background-color: #333333;
+    color: white;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+}
+
+ul{
+    display: flex;
+    background-color: black;
+    margin: 0;
+}
+
+li{
+    text-decoration: none;
+}
