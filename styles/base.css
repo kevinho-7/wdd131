@@ -11,8 +11,6 @@
     
 }
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -42,7 +40,6 @@ header h1 {
     text-decoration: dotted;
 }
 
-
 nav ul {
     list-style: none;
     display: flex;
@@ -68,7 +65,12 @@ main {
     max-width: 800px;
     margin: 20px auto;
     display: grid;
+    grid-template-columns: 2fr 1fr;
     gap: 20px;
+}
+
+.aboutMe {
+    
 }
 
 .card {
@@ -76,11 +78,46 @@ main {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    align-items: center;
+    gap: 20px;
 }
+
+.card img {
+    width: 100%;
+    max-width: 150px; 
+    border-radius: 8px;
+}
+
+h2 {
+    background-color: #06668E;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.subheading {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
 
 footer {
     margin-top: 20px;
-    background-color: #333;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-weight: 400;
     padding: 10px;
+}
+
+#lastModified{
+    font-family: var(--heading-fontfamily);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-color);
 }
