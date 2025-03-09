@@ -174,10 +174,27 @@ footer {
     margin-top: auto;
 }
 
-#lastModified{
+.copyright {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+#lastModified {
     font-family: var(--heading-fontfamily);
     font-size: 0.8rem;
     font-weight: 500;
     color: var(--text-color);
     margin-top: 0.5rem;
+}
+
+.flag-container {
+    text-align: center;
+}
+
+.flag-container figcaption {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+    font-style: italic;
 }
