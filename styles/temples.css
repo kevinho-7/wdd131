@@ -76,6 +76,7 @@ main h1{
     font-size: 2rem;
     text-align: center;
     margin: 1rem;
+    grid-column-start: 2
 }
 
 main{
@@ -84,12 +85,18 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
+    justify-content: center;
 }
 
-main figure img{
+main figure img{ 
     width: 400px;
     height: 250px;
     object-fit: cover;
+}
+
+main figure figcaption{
+    text-align: center;
+    font-family: var(--fontFamily-primary);
 }
 
 footer {
