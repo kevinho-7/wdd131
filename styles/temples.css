@@ -44,22 +44,25 @@ nav{
     justify-content: center;
     padding: 5px;
     margin: 10px 0;
+    width: 100%;
     
 }
 
 nav ul{
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     gap: 1rem;
     margin: 0;
     padding: 0;
+    width: 40%;
 
 }
 
 nav ul li a{
     text-decoration: none;
     color: var(--accent3-color);
+    font-size: 1.5rem;
     padding: 0.5rem 1rem;
 }
 
@@ -68,6 +71,26 @@ nav a:hover{
     text-decoration: underline;
 }
 
+main h1{
+    font-family: var(--fontFamily-secundary);
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+main{
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+main figure img{
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+}
 
 footer {
     background-color: var(--primary-color);
