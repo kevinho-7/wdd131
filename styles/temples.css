@@ -5,6 +5,7 @@
     --accent1-color: #333333;
     --accent2-color: #06668E;
     --accent3-color: #EAEAEA;
+    --text-color: #000;
 
     --fontFamily-primary: "Poppins", sans-serif;
     --fontFamily-secundary: "Roboto", monospace;
@@ -19,21 +20,28 @@
     font-size: 1rem;
 }
 
+html{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     background-color: var(--accent3-color);
     color: var(--accent1-color);
+    width: 100%;
 }
 
 header{
     background-color: var(--primary-color);
     color: var(--accent3-color);
+    width: 100%;
 }
 
 header h1{
     font-size: 3rem;
     font-family: var(--fontFamily-secundary);
     text-decoration:underline;
-    color: var(--accent1-color);
+    color: var(--text-color);
     padding: 10px;
     text-align: center;
 }
@@ -44,26 +52,26 @@ nav{
     justify-content: center;
     padding: 5px;
     margin: 10px 0;
-    width: 100%;
-    
 }
 
 nav ul{
     list-style: none;
-    display: flex;
+    text-align: center;
     justify-content: space-around;
     gap: 1rem;
     margin: 0;
     padding: 0;
-    width: 40%;
+}
 
+nav ul li{
+    padding: 10px;
 }
 
 nav ul li a{
     text-decoration: none;
-    color: var(--accent3-color);
+    color: white;
     font-size: 1.5rem;
-    padding: 0.5rem 1rem;
+    
 }
 
 nav a:hover{
@@ -71,38 +79,66 @@ nav a:hover{
     text-decoration: underline;
 }
 
-main h1{
-    font-family: var(--fontFamily-secundary);
-    font-size: 2rem;
-    text-align: center;
-    margin: 1rem;
-    grid-column-start: 2
-}
-
 main{
     max-width: 800px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    justify-content: center;
 }
 
-main figure img{ 
+main h1{
+    font-family: var(--fontFamily-secundary);
+    color: var(--text-color);
+    font-size: 3rem;
+    text-align: center;
+    margin: 1rem;
+    margin-top: 50px;
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.container figure img{ 
     width: 400px;
     height: 250px;
-    object-fit: cover;
+    margin: .5rem;
 }
 
-main figure figcaption{
+.container figure figcaption{
     text-align: center;
-    font-family: var(--fontFamily-primary);
 }
 
 footer {
     background-color: var(--primary-color);
-    color: var(--accent2-color);
-    padding: 1rem;
     text-align: center;
-    margin-top: auto;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
+
+footer p{
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1300px) {
+    .container{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container{
+        justify-content: center;
+    }
+    .container figure img{ 
+        width: 350px;
+        height: 250px;
+        margin: .5rem;
+    }
+}
+
