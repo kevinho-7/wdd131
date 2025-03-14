@@ -155,7 +155,6 @@ footer p{
 
     header h1{
         display: flex;
-        position: left;
         font-size: 3rem;
         font-family: var(--fontFamily-secundary);
         text-decoration:underline;
@@ -212,7 +211,6 @@ footer p{
 
     header h1{
         display: flex;
-        position: left;
         width: 30%;
         font-size: 2rem;
         font-family: var(--fontFamily-secundary);
@@ -245,7 +243,6 @@ footer p{
 
     header h1{
         display: flex;
-        position: left;
         font-size: 1.5rem;
         font-family: var(--fontFamily-secundary);
         text-decoration:underline;
@@ -277,12 +274,11 @@ footer p{
     }
 
     main h1{
-        font-family: var (--fontFamily-secundary);
-        color: var(--text-color);
+        font-family: var(--fontFamily-secundary);
+        color:var(--text-color);
         font-size: 2rem;
         text-align: center;
         margin: 1rem;
-        margin-top: 50px;
     }
 
     .container{
