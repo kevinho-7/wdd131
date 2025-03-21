@@ -14,10 +14,9 @@
     }
 
     .data-section, .weather-section{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        display: grid;  
+        grid-template-columns: 1fr;
+
         margin: 1rem;
         padding: 1rem;
         border-radius: 5px;
@@ -33,11 +32,21 @@
         color: var(--color3);
     }
 
+    div.weather-item, div.data-item{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 10px;
+        font-weight: bolder;
+        text-align: right;
+    }
+
     .weather-icon img{
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100px;
         height: auto;
-        
+        margin: 1rem auto;
     }
 
     .aLittle-green2{
