@@ -45,6 +45,7 @@ header h1{
     width: 100%;
 }
 
+
 .overlap-container {
     position: relative;
 }
@@ -125,6 +126,11 @@ header h1{
     margin: 10px;
 }
 
+.weather-icon img{
+    display: none;
+    
+}
+
 .weather-item{
     padding: 10px;
     font-weight: bolder;
@@ -148,4 +154,11 @@ footer p{
     font-weight: 500;
     font-family: var(--heading-font);
     color: var(--color6);
+}
+
+@media screen and (max-width: 1000px) {
+    .weather-section{
+        top: 40%;
+    }
+    
 }
