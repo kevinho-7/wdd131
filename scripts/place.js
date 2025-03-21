@@ -16,7 +16,7 @@ if (temperature <= 10 && windSpeed > 4.8) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const windChillElement = document.querySelector(".weather-item span#value4");
+    const windChillElement = document.querySelector(".weather-item span#wind-chill");
     if (windChillElement) {
         windChillElement.textContent = windChill;
     }
