@@ -1,0 +1,45 @@
+
+@media screen and (min-width: 1300px) {
+
+    nav{
+        background-color: var(--accent1-color);
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        margin: 10px 0;
+        width: 100%;
+        
+    }
+    
+    nav ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+        width: 40%;
+    
+    }
+
+
+    .container{
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+    }
+
+    .container figure img{ 
+        width: 400px;
+        height: 250px;
+        margin: .5rem;
+    }
+    
+    .container figure figcaption{
+        text-align: center;
+        font-family: var(--fontFamily-primary);
+        color: var(--text-color);
+    }
+    
+
+
+}
