@@ -38,27 +38,24 @@ header{
 header h1{
     font-size: 3rem;
     font-family: var(--fontFamily-secundary);
-    text-decoration:underline;
+    text-decoration: underline;
     color: var(--text-color);
-    padding: 10px;
     text-align: center;
+    padding: 10px;
 }
 
 nav{
     background-color: var(--accent1-color);
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    margin: 10px 0;
+    width: 100%;
 }
 
 nav ul{
     list-style: none;
-    text-align: center;
-    justify-content: space-around;
-    gap: 1rem;
+    display: flex;
+    justify-content: center;
     margin: 0;
     padding: 0;
+    gap: 3rem;
 }
 
 nav ul li{
@@ -100,71 +97,128 @@ nav.hidden {
     display: none;
 }
 
-main{
-    max-width: 800px;
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+main h2 {
+    font-family: var(--fontFamily-secundary);
+    color: var(--text-color);
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-main h1{
-    font-family: var(--fontFamily-secundary);
-    color: var(--text-color);
-    font-size: 3rem;
-    text-align: center;
-    margin: 1rem;
-    margin-top: 50px;
-}
-
-main h2{
-    font-family: var(--fontFamily-secundary);
-    color:var(--text-color);
-    font-size: 1.2rem;
-    text-align: center;
-    margin: 1rem;
-}
-
-div.temple-card h3,p{
-    text-align: center;
-}
-
-.container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-.container figure img{ 
+.container figure {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
-    height: auto;
-    margin: .5rem;
 }
 
-.brazil{
-    width: 30px;
-    height: 20px;
+.container figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.container figure figcaption{
+.container figure img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.container figure figcaption {
+    padding: 1.2rem;
+}
+
+.container figure figcaption h3 {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: var(--text-color);
+    font-family: var(--fontFamily-secundary);
     text-align: center;
+    margin-bottom: 1rem;
+}
+
+.container figure figcaption p {
+    color: var(--accent1-color);
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+    margin: 0.3rem 0;
+    display: grid;
+    grid-template-columns: minmax(70px, auto) 1fr;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.container figure figcaption p span {
+    color: var(--accent2-color);
+    font-weight: 500;
 }
 
 footer {
     background-color: var(--primary-color);
     text-align: center;
-    margin: 0;
-    padding: 2rem;
+    padding: 1.5rem;
     width: 100%;
+    margin-top: 2rem;
 }
 
 footer p{
     color: var(--text-color);
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 655px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .container figure {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .container figure img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        gap: 1rem;
+    }
 }
 
 @media screen and (max-width: 1300px) {
-
     header h1{
         display: flex;
         font-size: 3rem;
@@ -215,8 +269,13 @@ footer p{
     }
 
     .container{
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .container figure {
+        width: 100%;
     }
 }
 
@@ -225,38 +284,6 @@ footer p{
         display: flex;
     }
 
-}
-
-@media screen and (max-width: 1300px) {
-
-    header h1{
-        display: flex;
-        width: 30%;
-        font-size: 2rem;
-        font-family: var(--fontFamily-secundary);
-        text-decoration:underline;
-        color: var(--text-color);
-        padding: 10px;
-        text-align: center;
-    }
-
-    nav ul{
-        width: 100%;
-    }
-
-    nav ul li{
-        padding: 10px;
-    }
-
-    nav ul li a{
-        font-size: 1.2rem;
-    }
-
-    .container{
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        justify-content: center;
-    }
-    
 }
 
 @media screen and (max-width: 400px) {
@@ -314,8 +341,9 @@ footer p{
         justify-content: center;
     }
     .container figure img{ 
-        width: 100vw;
+        width: 100%;
         height: 250px;
-        margin: .5rem;
+        margin: 0;
     }
 }
+

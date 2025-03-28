@@ -81,48 +81,25 @@ document.addEventListener("DOMContentLoaded", function () {
       area: 34369,
       imageUrl:
       "https://churchofjesuschristtemples.org/assets/img/temples/cordoba-argentina-temple/cordoba-argentina-temple-11093-main.jpg"
-    },
-    {
-      templeName: "Rome Italy",
-      location: "Rome ,Italy",
-      dedicated: "2019, March, 10-12",
-      area: 41010,
-      imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-2642-main.jpg"
-    },
-    {
-      templeName: "Monticello Utah",
-      location: "Monticello, Utah",
-      dedicated: "1998, July, 27",
-      area: 11225,
-      imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/monticello-utah-temple/monticello-utah-temple-41257-main.jpg"
-    },
-    {
-      templeName: "Palmyra New York",
-      location: "Palmyra, New York",
-      dedicated: "2000, April, 06",
-      area: 10900,
-      imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/_temp/077-Palmyra-New-York-Temple.jpg"
-    },
+    }
 ];
 
   function displayTemples(filteredTemples) {
       container.innerHTML = "";
       filteredTemples.forEach((temple) => {
-          const templeCard = document.createElement("div");
-          templeCard.classList.add("temple-card");
-
-          templeCard.innerHTML = `
-              <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="350" height="200">
-              <h3>${temple.templeName}</h3>
-              <p><strong>Location:</strong> ${temple.location}</p>
-              <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-              <p><strong>Area:</strong> ${temple.area} sq ft</p>
+          const figure = document.createElement("figure");
+          
+          figure.innerHTML = `
+              <figcaption>
+                  <h3>${temple.templeName}</h3>
+                  <p><span>Location:</span> ${temple.location}</p>
+                  <p><span>Dedicated:</span> ${temple.dedicated}</p>
+                  <p><span>Area:</span> ${temple.area} sq ft</p>
+              </figcaption>
+              <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
           `;
 
-          container.appendChild(templeCard);
+          container.appendChild(figure);
       });
   }
 
@@ -131,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
   navLinks.forEach((link) => {
       link.addEventListener("click", function (event) {
           event.preventDefault();
-          const filter = link.textContent.toLowerCase();
+          const filter = this.getAttribute("data-filter").toLowerCase();
 
           let filteredTemples = temples;
           if (filter === "old") {
