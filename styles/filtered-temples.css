@@ -122,13 +122,17 @@ main h2{
     margin: 1rem;
 }
 
+div.temple-card h3,p{
+    text-align: center;
+}
+
 .container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     align-items: center;
-    margin-bottom: 50px;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .container figure img{ 
