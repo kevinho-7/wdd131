@@ -1,0 +1,9 @@
+:root{
+    --font1: "Anton", sans-serif;
+    --font2: "Lato", sans-serif; 
+}
+
+h2, p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
