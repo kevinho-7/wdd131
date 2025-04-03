@@ -1,4 +1,4 @@
-// Product array
+
 const products = [
     {
         id: "fc-1888",
@@ -27,7 +27,6 @@ const products = [
     }
 ];
 
-// Populate product select options
 document.addEventListener('DOMContentLoaded', function() {
     const productSelect = document.getElementById('productName');
     
@@ -38,8 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
         productSelect.appendChild(option);
     });
 
-    // Update copyright year
-    document.getElementById('year').textContent = new Date().getFullYear();
 }); 
 
 document.getElementById("currentyear").textContent = new Date().getFullYear();
