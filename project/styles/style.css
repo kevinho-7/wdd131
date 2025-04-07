@@ -1,0 +1,64 @@
+:root{
+    --head-fontfamily: "Anton", sans-serif;
+    --text-fontfamily: "Lato", sans-serif;
+
+    --color-principal: #000000;
+    --color-principal2: #ffffff;
+    --color-textAndHead: #1c1c1c;
+    --color-details: #bfbfbf;
+    --color-hovers: #c10000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.logo-back{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-principal);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.logo{
+    transform: translateY(35px);
+}
+
+.logo img{
+    height: 150px;
+}
+
+.nav-container{
+    background-color: var(--color-hovers);
+    height: 70px;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.nav-container li{
+    list-style-type: none;
+    display: inline-block;
+    transform: translateY(40px);
+}
+
+.nav-container li a{
+    font-family: var(--head-fontfamily);
+    font-size: 1.5rem;
+}
+
+.nav-lef{
+    margin-left: 500px;
+}
+.nav-rig{
+    margin-right: 500px;
+}
