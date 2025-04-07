@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kevin G. Ferreira">
+    <meta name="description" content="Contact page for Corinthians History website">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-mobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="scripts/script.js" defer></script>
+    <title>Contact - Corinthians History</title>
+</head>
+<body>
+    <header>
+        <div class="logo-back">
+            <div class="logo"><img src="images/corinthians.png" alt="corinthians logo"></div>
+        </div>
+        <div class="nav-container">
+            <nav class="nav-lef">
+                <ul>
+                    <li><a href="index.html">History</a></li>
+                </ul>
+            </nav>
+            <nav class="nav-rig">
+                <ul>
+                    <li><a href="contact.html">Contact-us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <p class="contact-intro">Have questions about Corinthians? Want to share your story? Get in touch with us!</p>
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" 
+                           id="name" 
+                           name="name" 
+                           pattern="[A-Za-z\s]{3,50}"
+                           title="Name should be between 3 and 50 characters and contain only letters"
+                           placeholder="Enter your full name"
+                           required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" 
+                           id="email" 
+                           name="email" 
+                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                           title="Please enter a valid email address"
+                           placeholder="Enter your email"
+                           required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" 
+                            name="message" 
+                            minlength="10"
+                            maxlength="500"
+                            placeholder="Type your message here (minimum 10 characters)"
+                            required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Corinthians History. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
