@@ -57,6 +57,7 @@
 .nav-container li a{
     font-family: var(--head-fontfamily);
     font-size: 1.5rem;
+    font-weight: 400;
     color: var(--color-textAndHead);
     text-decoration: none;
     transition: color 0.3s ease;
@@ -89,18 +90,29 @@ main {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.about-section h2 {
+.about-section h2,
+.gallery-section h2,
+.history-section h2,
+.titles-section h2,
+.club-section h2,
+.facilities-section h2,
+.museum-section h2,
+.contact-form h2 {
     font-family: var(--head-fontfamily);
     color: var(--color-textAndHead);
     font-size: 2rem;
+    font-weight: 400;
     margin-bottom: 1rem;
 }
 
-.about-section p {
+.about-section p,
+.text-content p,
+.facility-card p {
     font-family: var(--text-fontfamily);
     line-height: 1.6;
     color: var(--color-textAndHead);
     margin-bottom: 1rem;
+    font-weight: 300;
 }
 
 .about-section p:last-child {
@@ -115,14 +127,6 @@ main {
     background-color: var(--color-principal2);
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.contact-form h2 {
-    color: var(--color-textAndHead);
-    font-family: var(--head-fontfamily);
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 1rem;
 }
 
 .contact-intro {
@@ -141,7 +145,7 @@ main {
     display: block;
     margin-bottom: 0.5rem;
     color: var(--color-textAndHead);
-    font-weight: bold;
+    font-weight: 400;
     font-family: var(--text-fontfamily);
 }
 
@@ -195,7 +199,7 @@ main {
     border: none;
     border-radius: 4px;
     font-size: 1.1rem;
-    font-weight: bold;
+    font-weight: 400;
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: var(--text-fontfamily);
@@ -236,14 +240,6 @@ footer p {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.gallery-section h2 {
-    font-family: var(--head-fontfamily);
-    color: var(--color-textAndHead);
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -282,4 +278,294 @@ footer p {
     font-family: var(--text-fontfamily);
     font-size: 0.9rem;
     text-align: center;
+    font-weight: 300;
+}
+
+/* History Page Styles */
+.history-section {
+    background-color: var(--color-principal2);
+    padding: 3rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.history-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.achievements-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.achievements-list li {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.achievements-list li:before {
+    content: "⚽";
+    position: absolute;
+    left: 0;
+    color: var(--color-hovers);
+}
+
+/* Titles Section Styles */
+.titles-section {
+    background-color: var(--color-principal2);
+    padding: 3rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.titles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.title-card {
+    background-color: var(--color-principal);
+    color: var(--color-principal2);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.title-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.title-card h3,
+.facility-card h3 {
+    font-family: var(--head-fontfamily);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.title-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.title-card li {
+    font-family: var(--text-fontfamily);
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.title-card li:before {
+    content: "🏆";
+    position: absolute;
+    left: 0;
+}
+
+/* Club Page Styles */
+.club-section,
+.facilities-section,
+.museum-section {
+    background-color: var(--color-principal2);
+    padding: 3rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.club-content,
+.museum-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.club-content img,
+.museum-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.facility-card {
+    background-color: var(--color-principal2);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.facility-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.facility-card p {
+    font-family: var(--text-fontfamily);
+    color: var(--color-textAndHead);
+    padding: 0 1rem 1rem;
+    text-align: center;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+.museum-features {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.museum-features li {
+    font-family: var(--text-fontfamily);
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-weight: 300;
+}
+
+.museum-features li:before {
+    content: "🏆";
+    position: absolute;
+    left: 0;
+}
+
+.gallery-item .caption,
+.museum-features li,
+.achievements-list li,
+.title-card li {
+    font-family: var(--text-fontfamily);
+    font-weight: 300;
+}
+
+/* Updates Page Styles */
+.updates-section {
+    background-color: var(--color-principal2);
+    padding: 3rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.updates-section h2 {
+    font-family: var(--head-fontfamily);
+    color: var(--color-textAndHead);
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.updates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.update-card {
+    background-color: var(--color-principal2);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.update-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.update-card h3 {
+    font-family: var(--head-fontfamily);
+    color: var(--color-principal2);
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 1rem;
+    margin: 0;
+    background-color: var(--color-principal);
+    text-align: center;
+}
+
+.update-content {
+    padding: 0;
+}
+
+.update-content img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.update-text {
+    padding: 1.5rem;
+}
+
+.update-text h4 {
+    font-family: var(--head-fontfamily);
+    color: var(--color-textAndHead);
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.news-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-list li {
+    font-family: var(--text-fontfamily);
+    color: var(--color-textAndHead);
+    font-size: 0.95rem;
+    font-weight: 300;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.news-list li:before {
+    content: "•";
+    color: var(--color-hovers);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.update-date {
+    font-family: var(--text-fontfamily);
+    color: var(--color-textAndHead);
+    font-size: 0.9rem;
+    font-weight: 300;
+    font-style: italic;
+    margin-top: 1rem;
+    text-align: right;
 }
