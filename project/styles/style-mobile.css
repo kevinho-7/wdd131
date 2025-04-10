@@ -1,9 +1,69 @@
+@media screen and (max-width: 1200px) {
+    .logo {
+        right: 500px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .logo {
+        right: 400px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .logo {
+        right: 350px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .logo-back {
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-back::after {
+        height: 120px;
+    }
+
+    .logo {
+        position: relative;
+        right: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .logo img {
+        height: 80px;
+        margin-top: 10px;
+    }
+
+    .main-nav {
+        width: 100%;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 0;
+    }
+
+    .main-nav li a {
+        font-size: 1.2rem;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .nav-lef {
-        margin-left: 200px;
+        margin-left: 0;
     }
     .nav-rig {
-        margin-right: 200px;
+        margin-right: 0;
     }
 
     .gallery-grid {
@@ -77,6 +137,15 @@
     .update-content img {
         height: 180px;
     }
+
+    .main-nav ul {
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .main-nav li a {
+        font-size: 1.3rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -92,12 +161,46 @@
     }
 
     .nav-container li {
-        transform: none;
         margin: 0.5rem 0;
     }
 
+    .logo-back {
+        height: 200px;
+    }
+
+    .logo-back::before {
+        height: 100px;
+    }
+
+    .logo-back::after {
+        height: 100px;
+    }
+
+    .logo {
+        position: relative;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
     .logo img {
-        height: 120px;
+        height: 100px;
+    }
+
+    .main-nav {
+        height: 100px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .main-nav li a {
+        font-size: 1.2rem;
     }
 
     main {
@@ -244,11 +347,32 @@
 
 @media screen and (max-width: 480px) {
     .logo-back {
-        height: 80px;
+        height: 220px;
+    }
+
+    .logo-back::before {
+        height: 110px;
+    }
+
+    .logo-back::after {
+        height: 110px;
     }
 
     .logo img {
         height: 100px;
+    }
+
+    .main-nav {
+        height: 110px;
+    }
+
+    .main-nav ul {
+        gap: 0.8rem;
+    }
+
+    .main-nav li a {
+        font-size: 1.1rem;
+        padding: 3px 8px;
     }
 
     .nav-container li a {
