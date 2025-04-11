@@ -4,9 +4,10 @@
 
     --color-principal: #000000;
     --color-principal2: #ffffff;
-    --color-textAndHead: #000000;
+    --color-textAndHead: #1c1c1c;
     --color-details: #bfbfbf;
-    --color-hovers: #ff0000;
+    --color-hovers: #c10000;
+    --color-menu-text: #fff;
 }
 
 *{
@@ -44,7 +45,7 @@
     left: 0;
     width: 100%;
     height: 70px;
-    background-color: var(--color-principal);
+    background-color: var(--color-details);
     box-shadow: inset 0px 10px 15px -3px rgba(0, 0, 0, 0.9);
     z-index: 1;
 }
@@ -70,7 +71,6 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
-    background-color: var(--color-principal);
 }
 
 .main-nav ul {
@@ -83,11 +83,12 @@
 .main-nav li a{
     font-family: var(--head-fontfamily);
     font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-principal2);
+    font-weight: 500;
+    color: var(--color-menu-text);
     text-decoration: none;
     transition: color 0.3s ease;
     padding: 5px 10px;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }
 
 .main-nav li a:hover {
@@ -639,7 +640,7 @@ footer p {
 .last-viewed-details .info {
     font-family: var(--text-fontfamily);
     font-size: 0.9rem;
-    color: var(--color-hovers);
+    color: var(--color-textAndHead);
 }
 
 /* Toast Notification Styles */
