@@ -4,9 +4,9 @@
 
     --color-principal: #000000;
     --color-principal2: #ffffff;
-    --color-textAndHead: #1c1c1c;
+    --color-textAndHead: #000000;
     --color-details: #bfbfbf;
-    --color-hovers: #c10000;
+    --color-hovers: #ff0000;
 }
 
 *{
@@ -44,7 +44,7 @@
     left: 0;
     width: 100%;
     height: 70px;
-    background-color: var(--color-details);
+    background-color: var(--color-principal);
     box-shadow: inset 0px 10px 15px -3px rgba(0, 0, 0, 0.9);
     z-index: 1;
 }
@@ -70,6 +70,7 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
+    background-color: var(--color-principal);
 }
 
 .main-nav ul {
@@ -82,8 +83,8 @@
 .main-nav li a{
     font-family: var(--head-fontfamily);
     font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--color-textAndHead);
+    font-weight: 700;
+    color: var(--color-principal2);
     text-decoration: none;
     transition: color 0.3s ease;
     padding: 5px 10px;
@@ -170,7 +171,7 @@ main {
     display: block;
     margin-bottom: 0.5rem;
     color: var(--color-textAndHead);
-    font-weight: 400;
+    font-weight: 700;
     font-family: var(--text-fontfamily);
 }
 
@@ -194,7 +195,7 @@ main {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #999;
+    color: #666666;
     font-style: italic;
 }
 
@@ -297,13 +298,13 @@ footer p {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9);
     color: var(--color-principal2);
     padding: 1rem;
     font-family: var(--text-fontfamily);
     font-size: 0.9rem;
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* History Page Styles */
