@@ -93,6 +93,18 @@ document.addEventListener("DOMContentLoaded", function() {
         const info = galleryInfo[index];
         return `${info.title} - ${info.year}`;
     }
+
+    // Contact Form Handling
+    const contactForm = document.querySelector('.contact-form form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (contactForm.checkValidity()) {
+                alert('Your message has been sent successfully!');
+                contactForm.reset();
+            }
+        });
+    }
 });
 
 
