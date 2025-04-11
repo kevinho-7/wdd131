@@ -17,22 +17,17 @@
 }
 
 @media screen and (max-width: 900px) {
-    /* RESET E SIMPLIFICAÇÃO DO HEADER MOBILE */
-    
-    /* Remove pseudo-elementos */
     .logo-back::before, 
     .logo-back::after {
         display: none !important;
     }
     
-    /* Header básico */
     .logo-back {
         background-color: black !important;
         height: auto !important;
         position: relative !important;
     }
     
-    /* Logo centralizado */
     .logo {
         position: static !important;
         right: auto !important;
@@ -45,7 +40,6 @@
         height: 80px !important;
     }
     
-    /* Botão menu */
     #menu {
         font-size: 1.5rem !important;
         border: 0 !important;
@@ -66,7 +60,6 @@
         content: "❌" !important;
     }
     
-    /* Navegação mobile */
     .main-nav {
         background-color: black !important;
         width: 100% !important;
@@ -76,7 +69,6 @@
         display: none !important;
     }
     
-    /* Estilo dos itens do menu */
     .main-nav ul {
         display: flex !important;
         flex-direction: column !important;
@@ -97,7 +89,6 @@
         text-transform: uppercase !important;
     }
     
-    /* Remove margens */
     .nav-lef, 
     .nav-rig {
         margin: 0 !important;

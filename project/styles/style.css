@@ -594,3 +594,49 @@ footer p {
     margin-top: 1rem;
     text-align: right;
 }
+
+.last-viewed-section {
+    background-color: var(--color-principal2);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.last-viewed-section h3 {
+    font-family: var(--head-fontfamily);
+    color: var(--color-textAndHead);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.last-viewed-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.last-viewed-content img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.last-viewed-details {
+    flex: 1;
+    max-width: 300px;
+}
+
+.last-viewed-details .caption {
+    font-family: var(--text-fontfamily);
+    font-size: 1.1rem;
+    color: var(--color-textAndHead);
+    margin-bottom: 0.5rem;
+}
+
+.last-viewed-details .info {
+    font-family: var(--text-fontfamily);
+    font-size: 0.9rem;
+    color: var(--color-hovers);
+}
